@@ -1,12 +1,12 @@
 const express = require('express')
+const routerApi = require('./routes/index')
 const app = express()
 const port = 3000
 
-app.get('/', (req, res) => {
-  res.send('Home Page')
-})
-
+routerApi(app)
 
 app.listen(port, () => {
   console.log(`This server is listen in localhost:${port}`)
 })
+
+
